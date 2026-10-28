@@ -1,0 +1,34 @@
+{
+  "name": "periferia-ia-retos-qe",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "demo:01": "tsx reto-01/demo.ts",
+    "demo:02": "tsx reto-02/demo.ts",
+    "demo:03": "tsx reto-03/demo.ts",
+    "demo": "npm run demo:01 && npm run demo:02 && npm run demo:03",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2",
+    "openai": "^4.77.0",
+    "pdfkit": "^0.16.0",
+    "zod": "^3.24.1",
+    "zod-to-json-schema": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.5",
+    "@types/pdfkit": "^0.13.8",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
