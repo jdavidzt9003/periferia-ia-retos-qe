@@ -1,5 +1,6 @@
 import OpenAI from "openai";
 import type {LlmAdapter} from "./adapter.js";
+
 export class OpenAIAdapter implements LlmAdapter{
  private client:OpenAI;
  constructor(){if(!process.env.OPENAI_API_KEY)throw new Error("OPENAI_API_KEY no configurada");this.client=new OpenAI({apiKey:process.env.OPENAI_API_KEY,timeout:20000,maxRetries:1});}

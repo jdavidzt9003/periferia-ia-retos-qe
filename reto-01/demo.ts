@@ -1,4 +1,9 @@
-import fs from "node:fs";import path from "node:path";import {ROOT} from "../src/shared.js";import {proveedor_leer_solicitud,proveedor_generar_formulario,proveedor_armar_paquete} from "./tools.js";
+import fs from "node:fs";
+import path from "node:path";
+import {ROOT} from "../src/shared.js";
+import {proveedor_leer_solicitud,proveedor_generar_formulario,proveedor_armar_paquete} from "./tools.js";
+
+
 process.env.DEMO_MODE="1";
 const out=path.join(ROOT,"out/reto-01");fs.rmSync(out,{recursive:true,force:true});
 for(const caso of ["co-industrias-delta","ec-corp-andina","hn-agroexport-sula","pa-logistica-istmo"]){

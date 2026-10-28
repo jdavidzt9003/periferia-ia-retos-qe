@@ -1,4 +1,9 @@
-import fs from "node:fs";import path from "node:path";import {ROOT} from "../src/shared.js";import {contratos_leer_buzon,contratos_extraer,contratos_validar,contratos_registrar,contratos_alertas} from "./tools.js";
+import fs from "node:fs";
+import path from "node:path";
+import {ROOT} from "../src/shared.js";
+import {contratos_leer_buzon,contratos_extraer,contratos_validar,contratos_registrar,contratos_alertas} from "./tools.js";
+
+
 process.env.DEMO_MODE="1";
 fs.rmSync(path.join(ROOT,"out/reto-02"),{recursive:true,force:true});
 const inbox=JSON.parse(await contratos_leer_buzon({}));console.log("Buzón:",inbox.data.mensajes.length,"mensajes");
